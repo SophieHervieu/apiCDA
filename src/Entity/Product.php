@@ -24,14 +24,17 @@ use Symfony\Component\Serializer\Annotation\Groups;
             ),
         new Post(
             uriTemplate: '/product',
+            status: 201
         ),
         new Delete(
             uriTemplate: '/product/{id}',
             requirements: ['id' => '\d+'],
+            status: 204
         ),
         new Put(
             uriTemplate: '/product/{id}',
             requirements: ['id' => '\d+'],
+            status: 201
         ),
     ],
     order: ['id' => 'ASC', 'name' => 'ASC'],
